@@ -171,7 +171,7 @@ client.on('interactionCreate', async interaction => {
 
     // --- คำสั่ง /card ---
     if (commandName === 'card') {
-        await interaction.deferReply();
+        await interaction.deferReply({ ephemeral: true });
 
         try {
             const customer = await Customer.findOne({ userId: interaction.user.id });
