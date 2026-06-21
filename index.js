@@ -59,7 +59,7 @@ const stampPositions = [
 
 client.once('clientReady', async () => {
     console.log(`🤖 บอทปั๊มแต้มออนไลน์แล้วในชื่อ: ${client.user.tag}`);
-client.user.setActivity('porkhyun community | บัตรสะสมแต้ม.', { 
+client.user.setActivity('บัตรสะสมแต้ม | แลกรางวัล', { 
         type: ActivityType.Watching 
     });
     const commands = [
