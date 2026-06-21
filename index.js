@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { Client, GatewayIntentBits, AttachmentBuilder, SlashCommandBuilder } = require('discord.js');
+const { Client, GatewayIntentBits, AttachmentBuilder, SlashCommandBuilder, ActivityType } = require('discord.js');
 const mongoose = require('mongoose'); // 🍃 เปลี่ยนมาใช้ Mongoose แทน SQLite
 const { createCanvas, loadImage } = require('@napi-rs/canvas');
 const express = require('express');
@@ -59,7 +59,9 @@ const stampPositions = [
 
 client.once('clientReady', async () => {
     console.log(`🤖 บอทปั๊มแต้มออนไลน์แล้วในชื่อ: ${client.user.tag}`);
-
+client.user.setActivity('porkhyun community | บัตรสะสมแต้ม.', { 
+        type: ActivityType.Watching 
+    });
     const commands = [
         new SlashCommandBuilder()
             .setName('addstamp')
