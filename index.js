@@ -198,7 +198,7 @@ async function drawCard(stampCount) {
     let cardImage, stampImage;
 
     try {
-        const cardBuffer = fs.readFileSync(path.join(__dirname, 'card'));
+        const cardBuffer = fs.readFileSync(path.join(__dirname, 'card.png'));
         cardImage = await loadImage(cardBuffer);
         if (cardImage) ctx.drawImage(cardImage, 0, 0, 1000, 667);
     } catch (err) {
